@@ -1,0 +1,34 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="exercicios-jpa" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>modelo.basico.basico.Usuario</class>
+        <class>modelo.basico.basico.Produto</class>
+        <class>modelo.basico.umpraum.Assento</class>
+        <class>modelo.basico.umpraum.Cliente</class>
+        <class>modelo.basico.umpramuitos.ItemPedido</class>
+        <class>modelo.basico.umpramuitos.Pedido</class>
+        <class>modelo.basico.muitospramuitos.Sobrinho</class>
+        <class>modelo.basico.muitospramuitos.Tio</class>
+        <class>modelo.basico.muitospramuitos.Ator</class>
+        <class>modelo.basico.muitospramuitos.Filme</class>
+        <class>modelo.basico.Composicao.Endereco</class>
+        <class>modelo.basico.Composicao.Fornecedor</class>
+        <class>modelo.basico.Composicao.Funcionario</class>
+        <class>modelo.basico.heranca.Aluno</class>
+        <class>modelo.basico.heranca.AlunoBolsista</class>
+
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/curso_java"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="123456789"/>
+
+            <!-- Configurações do Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
